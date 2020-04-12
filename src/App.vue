@@ -4,7 +4,7 @@
 
     <div id="app">
       <nav id="nav">
-        <router-link to="/" class="nav-item scoresheet">Scoresheet</router-link>
+        <router-link to="/" class="nav-item scoresheet">{{ $t('scoresheet')}}</router-link>
         <span class="nav-item automata" title="The automata feature is not implemented yet">
           Automata
           <div class="coming-soon">{{ $t('comingSoon') }}</div>

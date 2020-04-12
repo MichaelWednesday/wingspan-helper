@@ -9,7 +9,7 @@ export default {
   name: 'LanguageToggle',
   computed: {
     currentLanguage () {
-      return this.$store.state.language === 'en' ? 'de' : 'en'
+      return this.$store.state.language === 'en' ? 'pl' : 'en'
     }
   },
   methods: {

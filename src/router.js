@@ -33,14 +33,14 @@ router.beforeEach((to, from, next) => {
   if (
     routeParamLang &&
     routeParamLang !== stateLang &&
-    ['en', 'de'].includes(routeParamLang)
+    ['pl', 'en', 'de'].includes(routeParamLang)
   ) {
     // set language based on router param
     store.dispatch('setLanguage', routeParamLang)
   } else if (store.state.language === null) {
     // set language based on user system locale
-    const isGerman = navigator.language.toLowerCase().includes('de')
-    store.dispatch('setLanguage', isGerman ? 'de' : 'en')
+    const isPolish = navigator.language.toLowerCase().includes('pl')
+    store.dispatch('setLanguage', isPolish ? 'pl' : 'en')
   }
 
   next()

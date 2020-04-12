@@ -5,6 +5,7 @@ Vue.use(VueI18n)
 
 const messages = {
   en: {
+    scoresheet: 'Scoresheet',
     playerTitle: 'Player',
     resetPoints: 'Reset points',
     pointsInputTitle: '%{scoreType} points for player %{playerNum}',
@@ -14,6 +15,7 @@ const messages = {
     scoreTypes: ['Birds', 'Bonus cards', 'End-of-round goals', 'Eggs', 'Food on cards', 'Tucked cards']
   },
   de: {
+    scoresheet: 'Scoresheet',
     playerTitle: 'Spieler',
     resetPoints: 'Punkte zurücksetzen',
     pointsInputTitle: 'Punkte für %{scoreType} für Spieler %{playerNum}',
@@ -21,11 +23,21 @@ const messages = {
     comingSoon: 'kommt bald',
     total: 'Gesamt',
     scoreTypes: ['Vögel', 'Bonuskarten', 'Rundenziele', 'Eier', 'Gelagertes Futter', 'Karten unter Vögeln']
+  },
+  pl: {
+    scoresheet: 'Karta wyników',
+    playerTitle: 'Gracze',
+    resetPoints: 'Kasuj punkty',
+    pointsInputTitle: '%{scoreType} punktów dla gracza %{playerNum}',
+    playerTotalTitle: 'wszystkich punktów dla gracza %{playerNum}',
+    comingSoon: 'wkrótce',
+    total: 'Suma',
+    scoreTypes: ['Ptaki', 'Karty bonusowe', 'Cele', 'Jajo', 'Pozywienie na kartach', 'Karta pod inna karta']
   }
 }
 
 export default new VueI18n({
-  locale: 'en',
+  locale: 'pl',
   fallbackLocale: 'en',
   messages
 })
