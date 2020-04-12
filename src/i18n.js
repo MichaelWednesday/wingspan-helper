@@ -32,7 +32,7 @@ const messages = {
     playerTotalTitle: 'wszystkich punktów dla gracza %{playerNum}',
     comingSoon: 'wkrótce',
     total: 'Suma',
-    scoreTypes: ['Ptaki', 'Karty bonusowe', 'Cele', 'Jajo', 'Pozywienie na kartach', 'Karta pod inna karta']
+    scoreTypes: ['Ptaki', 'Karty bonusowe', 'Cele', 'Jajo', 'Pożywienie na kartach', 'Karta pod inną kartą']
   }
 }
 
