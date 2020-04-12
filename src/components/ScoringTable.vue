@@ -88,6 +88,9 @@ export default {
       let score = Number.parseInt(value)
       if (value.length === 0) {
         score = 0
+      } else if (score > 100) {
+        event.target.setCustomValidity('Input must be lower than or equal to 100')
+        score = 0
       } else if (isNaN(score)) {
         event.target.setCustomValidity('Input must be a number')
         score = 0
