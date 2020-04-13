@@ -28,11 +28,11 @@ const messages = {
     scoresheet: 'Karta wyników',
     playerTitle: 'Gracze',
     resetPoints: 'Kasuj punkty',
-    pointsInputTitle: '%{scoreType} punktów dla gracza %{playerNum}',
-    playerTotalTitle: 'wszystkich punktów dla gracza %{playerNum}',
+    pointsInputTitle: '%{scoreType} gracza %{playerNum}',
+    playerTotalTitle: 'suma punktów dla gracza %{playerNum}',
     comingSoon: 'wkrótce',
     total: 'Suma',
-    scoreTypes: ['Ptaki', 'Karty bonusowe', 'Cele', 'Jajo', 'Pożywienie na kartach', 'Karta pod inną kartą']
+    scoreTypes: ['Ptaki', 'Karty bonusowe', 'Cele', 'Jaja', 'Pożywienie na kartach', 'Karty pod inną kartą']
   }
 }
 

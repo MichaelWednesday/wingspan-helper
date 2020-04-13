@@ -7,7 +7,7 @@
     </div>
 
     <div class="row" v-for="(scoreType, i) in scoreTypes" :key="i">
-      <p class="cell cell--label">{{localizedScoreTypes[i]}}</p>
+      <p class="cell cell--label cell--scoreType">{{localizedScoreTypes[i]}}</p>
       <div
         class="cell cell--score"
         v-for="(player, playerNum) in activePlayers"
@@ -17,6 +17,7 @@
           class="score-input"
           type="number"
           min="0"
+          max="100"
           :id="scoreId(scoreType, playerNum)"
           :title="label(localizedScoreTypes[i], playerNum)"
           :aria-label="label(localizedScoreTypes[i], playerNum)"
@@ -90,7 +91,7 @@ export default {
         score = 0
       } else if (score > 100) {
         event.target.setCustomValidity('Input must be lower than or equal to 100')
-        score = 0
+        score = this.activePlayers[playerNum].scores[scoreType]
       } else if (isNaN(score)) {
         event.target.setCustomValidity('Input must be a number')
         score = 0
@@ -166,6 +167,10 @@ $color--border: rgba(0, 0, 0, 0.2);
 
 .cell--player-num {
   text-align: center;
+}
+
+.cell--scoreType {
+  width: 110%;
 }
 
 .cell--total {
