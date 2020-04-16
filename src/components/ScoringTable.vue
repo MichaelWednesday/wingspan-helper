@@ -3,7 +3,9 @@
 
     <div class="row row--player">
       <p class="cell cell--label">{{ $t('playerTitle') }}</p>
-      <div v-for="player in playerCount" :key="player" class="cell cell--label cell--player-num">{{player}}</div>
+      <div v-for="player in playerCount" :key="player" class="cell cell--label cell--player-num">
+        <img :src="require(`../assets/img/cubes/${player}.png`)" class="cell--player-cube" />
+      </div>
     </div>
 
     <div class="row" v-for="(scoreType, i) in scoreTypes" :key="i">
@@ -167,6 +169,13 @@ $color--border: rgba(0, 0, 0, 0.2);
 
 .cell--player-num {
   text-align: center;
+  width: auto;
+  padding: 0;
+}
+
+.cell--player-cube {
+  object-fit: contain;
+  height: 44px;
 }
 
 .cell--scoreType {

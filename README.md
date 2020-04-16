@@ -4,7 +4,7 @@ A small web app dedicated to the beautiful boardgame [Wingspan](https://stonemai
 
 :sparkles: You can add the app to your homescreen and use it offline if you want!
 
-![Screenshot](https://i.imgur.com/jfOl2F4.png)
+![Screenshot](https://i.imgur.com/hYQRmel.png)
 
 ## Credits
 

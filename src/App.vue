@@ -15,7 +15,9 @@
       </main>
       <footer id="footer">
         Contribute on
-        <a href="https://github.com/greengiraffe/wingspan-helper">GitHub</a> •
+        <a href="https://github.com/MichaelWednesday/wingspan-helper">GitHub</a> •
+        Original version by
+        <a href="https://github.com/greengiraffe/wingspan-helper">greengiraffe</a> •
         <em>Cardenio Modern</em> typeface by
         <a href="http://nilscordes.com/">Nils Cordes</a>
       </footer>
