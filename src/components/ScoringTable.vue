@@ -3,8 +3,8 @@
 
     <div class="row row--player">
       <p class="cell cell--label">{{ $t('playerTitle') }}</p>
-      <div v-for="player in playerCount" :key="player" class="cell cell--label cell--player-num">
-        <img :src="require(`../assets/img/cubes/${player}.png`)" class="cell--player-cube" />
+      <div v-for="(player, playerNum) in activePlayers" :key="playerNum" class="cell cell--label cell--player-num">
+        <img :src="require(`../assets/img/cubes/${player.colour}.png`)" class="cell--player-cube" />
       </div>
     </div>
 
@@ -38,7 +38,7 @@
         :key="playerNum"
         class="cell cell--total"
         >
-          <span class="result" v-show="showResults" :title="totalLabel(playerNum)">
+          <span class="result" v-show="showResults" :title="totalLabel($t(player.colour))">
             {{player.total}}
           </span>
         </div>
@@ -82,8 +82,8 @@ export default {
       return this.$t('pointsInputTitle', { playerNum, scoreType })
     },
 
-    totalLabel (playerNum) {
-      return this.$t('playerTotalTitle', { playerNum })
+    totalLabel (colour) {
+      return this.$t('playerTotalTitle', { colour })
     },
 
     updateScore (event, playerNum, scoreType) {
