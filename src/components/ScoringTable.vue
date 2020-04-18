@@ -119,11 +119,11 @@ $color--border: rgba(0, 0, 0, 0.2);
 .row {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: minmax(8.5rem, 1fr) 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: minmax(150px, 2fr) 1fr 1fr 1fr 1fr 1fr;
   text-align: center;
 
   @include break-phone {
-    grid-template-columns: minmax(11rem, 1fr) 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: minmax(150px, 2fr) 1fr 1fr 1fr 1fr 1fr;
   }
 
   + .row {
@@ -171,15 +171,24 @@ $color--border: rgba(0, 0, 0, 0.2);
   text-align: center;
   width: auto;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cell--player-cube {
   object-fit: contain;
-  height: 44px;
+  max-height: 44px;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .cell--player-cube {
+  max-height: 26px;
+}
 }
 
 .cell--scoreType {
-  width: 110%;
+  // width: 110%;
 }
 
 .cell--total {
