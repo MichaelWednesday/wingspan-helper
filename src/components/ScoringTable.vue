@@ -21,7 +21,7 @@
           min="0"
           max="100"
           :id="scoreId(scoreType, playerNum)"
-          :title="label(localizedScoreTypes[i], playerNum)"
+          :title="label(localizedScoreTypes[i], $t(player.colour))"
           :aria-label="label(localizedScoreTypes[i], playerNum)"
           :value="score(scoreType, playerNum) == -1 ? null : score(scoreType, playerNum)"
           @input="updateScore($event, playerNum, scoreType)"
@@ -78,12 +78,12 @@ export default {
         .replace(/\s/, '-')}`
     },
 
-    label (scoreType, playerNum) {
-      return this.$t('pointsInputTitle', { playerNum, scoreType })
+    label (scoreType, playerColour) {
+      return this.$t('pointsInputTitle', { playerColour, scoreType })
     },
 
-    totalLabel (colour) {
-      return this.$t('playerTotalTitle', { colour })
+    totalLabel (playerColour) {
+      return this.$t('playerTotalTitle', { playerColour })
     },
 
     updateScore (event, playerNum, scoreType) {
