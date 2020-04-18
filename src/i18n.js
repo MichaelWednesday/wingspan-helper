@@ -13,6 +13,7 @@ const messages = {
     comingSoon: 'coming soon',
     total: 'Total',
     scoreTypes: ['Birds', 'Bonus cards', 'End-of-round goals', 'Eggs', 'Food on cards', 'Tucked cards'],
+    playerColourTitle: '%{playerColour} player',
     blue: 'blue',
     red: 'red',
     yellow: 'yellow',
@@ -28,11 +29,12 @@ const messages = {
     comingSoon: 'kommt bald',
     total: 'Gesamt',
     scoreTypes: ['Vögel', 'Bonuskarten', 'Rundenziele', 'Eier', 'Gelagertes Futter', 'Karten unter Vögeln'],
-    blue: 'blue',
-    red: 'red',
-    yellow: 'yellow',
-    green: 'green',
-    purple: 'purple'
+    playerColourTitle: 'Spieler %{playerColour}',
+    blue: 'Blau',
+    red: 'Rot',
+    yellow: 'Gelb',
+    green: 'Grün',
+    purple: 'Violett'
   },
   pl: {
     scoresheet: 'Karta wyników',
@@ -43,6 +45,7 @@ const messages = {
     comingSoon: 'wkrótce',
     total: 'Suma',
     scoreTypes: ['Ptaki', 'Karty bonusowe', 'Cele', 'Jaja', 'Pożywienie na kartach', 'Karty pod inną kartą'],
+    playerColourTitle: 'Kostka gracza %{playerColour}',
     blue: 'niebieskiego',
     red: 'czerwonego',
     yellow: 'żółtego',

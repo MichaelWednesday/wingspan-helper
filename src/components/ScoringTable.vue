@@ -4,7 +4,12 @@
     <div class="row row--player">
       <p class="cell cell--label">{{ $t('playerTitle') }}</p>
       <div v-for="(player, playerNum) in activePlayers" :key="playerNum" class="cell cell--label cell--player-num">
-        <img :src="require(`../assets/img/cubes/${player.colour}.png`)" class="cell--player-cube" />
+        <img
+          :src="require(`../assets/img/cubes/${player.colour}.png`)"
+          class="cell--player-cube"
+          :title="cubeLabel($t(player.colour))"
+          :aria-label="cubeLabel($t(player.colour))"
+        />
       </div>
     </div>
 
@@ -22,7 +27,7 @@
           max="100"
           :id="scoreId(scoreType, playerNum)"
           :title="label(localizedScoreTypes[i], $t(player.colour))"
-          :aria-label="label(localizedScoreTypes[i], playerNum)"
+          :aria-label="label(localizedScoreTypes[i], $t(player.colour))"
           :value="score(scoreType, playerNum) == -1 ? null : score(scoreType, playerNum)"
           @input="updateScore($event, playerNum, scoreType)"
         />
@@ -76,6 +81,10 @@ export default {
       return `player-${playerNum}-score-${scoreType
         .toLowerCase()
         .replace(/\s/, '-')}`
+    },
+
+    cubeLabel (playerColour) {
+      return this.$t('playerColourTitle', { playerColour })
     },
 
     label (scoreType, playerColour) {
