@@ -1,10 +1,11 @@
 <template>
   <div class="home">
-    <!-- <Slider v-model.number="playerCount"/> -->
     <ScoringTable />
+    <div class="action-bar language">
+      <LanguageChooser class="action language"/>
+    </div>
     <div class="action-bar">
       <PlayerCountChooser class="action player-count"/>
-      <LanguageToggle />
       <button class="action reset" @click="reset()">{{ $t('resetPoints') }}</button>
     </div>
   </div>
@@ -14,14 +15,14 @@
 // @ is an alias to /src
 import ScoringTable from '@/components/ScoringTable.vue'
 import PlayerCountChooser from '@/components/PlayerCountChooser.vue'
-import LanguageToggle from '@/components/LanguageToggle.vue'
+import LanguageChooser from '@/components/LanguageChooser.vue'
 
 export default {
   name: 'home',
   components: {
     ScoringTable,
-    PlayerCountChooser,
-    LanguageToggle
+    LanguageChooser,
+    PlayerCountChooser
   },
   methods: {
     reset () {
@@ -34,9 +35,9 @@ export default {
 <style lang="scss">
   .action-bar {
     margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-end;
 
     @include break-phone {
       justify-content: flex-end;
@@ -51,6 +52,60 @@ export default {
     @include break-phone {
       margin-left: 1rem;
       margin-top: 0;
+    }
+  }
+
+  .action-bar.language {
+    margin-top: 1rem;
+    margin-right: 1rem;
+
+    @include break-phone {
+      justify-content: flex-start;
+      flex-direction: row;
+    }
+  }
+
+  .action.language {
+    margin-left: 0;
+    border-radius: $border-radius-default;
+
+    button {
+      border-radius: 0;
+      background-color: $color-fg--light;
+      color: $color-text;
+      padding: 0.25rem 0.5rem;
+
+      @include break-phone {
+        padding: 0.25rem 1rem;
+      }
+
+      &:hover, &:focus {
+        box-shadow: inset 0 0 0 2px $color-primary;
+      }
+
+      &.active {
+        background-color: $color-primary;
+        color: $color-fg;
+      }
+
+      &:first-child {
+        border-top-left-radius: $border-radius-default;
+        border-bottom-left-radius: $border-radius-default;
+      }
+    }
+
+    span {
+      border-top-right-radius: $border-radius-default;
+      border-bottom-right-radius: $border-radius-default;
+      // box-shadow: inset 0 0 0 2px $color-primary;
+      background-color: $color-fg--light;
+      color: $color-text;
+      border: 0 solid $color-primary;
+      padding: 0.25rem 1rem;
+      font-family: $font-primary;
+      font-weight: bold;
+      letter-spacing: 0.01em;
+      display: inline-block;
     }
   }
 

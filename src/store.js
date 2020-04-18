@@ -83,8 +83,7 @@ export default new Vuex.Store({
       commit('setLanguage', language)
     },
 
-    toggleLanguage ({ state, dispatch }) {
-      const newLang = state.language === 'en' ? 'pl' : 'en'
+    toggleLanguage ({ state, dispatch }, newLang) {
       dispatch('setLanguage', newLang)
     }
   }

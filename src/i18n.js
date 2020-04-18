@@ -5,6 +5,7 @@ Vue.use(VueI18n)
 
 const messages = {
   en: {
+    language: 'Language',
     scoresheet: 'Scoresheet',
     playerTitle: 'Player',
     resetPoints: 'Reset points',
@@ -21,6 +22,7 @@ const messages = {
     purple: 'purple'
   },
   de: {
+    language: 'Sprache',
     scoresheet: 'Scoresheet',
     playerTitle: 'Spieler',
     resetPoints: 'Punkte zurücksetzen',
@@ -37,6 +39,7 @@ const messages = {
     purple: 'Violett'
   },
   pl: {
+    language: 'Język',
     scoresheet: 'Karta wyników',
     playerTitle: 'Gracze',
     resetPoints: 'Kasuj punkty',
